@@ -19,6 +19,10 @@
             <p v-else-if="inventory <= 10 && inventory > 0">Running out of stock</p>
             <p v-else>no stock</p>
         </div>
+
+        <ul>
+            <li v-for="detail in details">{{detail}}</li>
+        </ul>
         <a :href="url" target="_blank">Google</a>
     </div>
 

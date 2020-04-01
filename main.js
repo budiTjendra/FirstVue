@@ -6,6 +6,7 @@ var app = new Vue({
         image: 'socks-white.jpg',
         url: 'http://www.google.com',
         inventory: 0,
-        onSale: true
+        onSale: true,
+        details: ["70% cotton","30% spandex"]
     }
 })
