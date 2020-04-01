@@ -3,7 +3,7 @@ var app = new Vue({
     data:{
         product: 'Socks',
         message: 'helloworld',
-        image: 'socks-white.jpg',
+        image: 'images/socks-white.jpg',
         url: 'http://www.google.com',
         inventory: 0,
         onSale: true,
@@ -12,12 +12,12 @@ var app = new Vue({
             {
                 variantId: 2234,
                 variantColor: 'green',
-                variantImage:'socks-white.jpg'
+                variantImage:'images/socks-white.jpg'
             },
             {
                 variantId: 2235,
                 variantColor: 'blue',
-                variantImage:'socks-blue.jpg'
+                variantImage:'images/socks-blue.jpg'
             }
         ],
         cart: 0,
