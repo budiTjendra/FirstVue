@@ -8,6 +8,8 @@
 
     <div class="nav-bar"></div>
     <div id="app">
+
+        <span v-show="onSale"><h1 style="color:red">ON SALE!</h1></span>
         <div class="product-image">
             <img :src="image"/>
         </div>

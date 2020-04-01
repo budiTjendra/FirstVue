@@ -5,6 +5,7 @@ var app = new Vue({
         message: 'helloworld',
         image: 'socks-white.jpg',
         url: 'http://www.google.com',
-        inventory: 0
+        inventory: 0,
+        onSale: true
     }
 })
