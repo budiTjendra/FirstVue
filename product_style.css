@@ -56,6 +56,10 @@ img {
     margin-top: 5px;
 }
 
+.out-of-stock{
+    text-decoration: line-through
+}
+
 .cart {
     margin-right: 25px;
     float: right;
