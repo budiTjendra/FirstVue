@@ -1,3 +1,21 @@
+Vue.component('productDetail', {
+  props: {
+      details: {
+          type: Array,
+          required: true
+      }
+  },
+  template:`
+    <ul>
+        <li v-for="detail in details">{{detail}}</li>
+    </ul>
+  `,
+  data() {
+      console.log(this.detail)
+      return {}
+  }
+});
+
 Vue.component('product',{
     props: {
       premium:{
@@ -15,9 +33,7 @@ Vue.component('product',{
                 <h1>{{ title }}</h1>
                 <p>{{ inventoryStatus}}</p>
                 <p>{{shipping}}</p>
-                <ul>
-                    <li v-for="detail in details">{{detail}}</li>
-                </ul>
+                <productDetail :details="details"></productDetail>
                 
                 <div  v-for="(variant, index) in variants"
                       :key="variant.variantId"
