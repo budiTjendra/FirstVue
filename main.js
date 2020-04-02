@@ -7,19 +7,20 @@ var app = new Vue({
         url: 'http://www.google.com',
         inStock:false,
         selectedVariant:0,
-        inventory: 0,
         onSale: true,
         details: ["70% cotton","30% spandex"],
         variants:[
             {
                 variantId: 2234,
                 variantColor: 'green',
-                variantImage:'images/socks-white.jpg'
+                variantImage:'images/socks-white.jpg',
+                variantQuantity: 0,
             },
             {
                 variantId: 2235,
                 variantColor: 'blue',
-                variantImage:'images/socks-blue.jpg'
+                variantImage:'images/socks-blue.jpg',
+                variantQuantity: 12
             }
         ],
         cart: 0,
@@ -29,7 +30,7 @@ var app = new Vue({
             this.cart += 1
         },
         updateProduct: function(index) {
-            this.selectedVariant =  index
+            this.selectedVariant =  index;
         },
         removeOne() {
             if (this.cart > 0)
@@ -50,6 +51,9 @@ var app = new Vue({
         },
         image: function (){
             return this.variants[this.selectedVariant].variantImage
+        },
+        inventory: function(){
+            return this.variants[this.selectedVariant].variantQuantity
         }
     }
 })
