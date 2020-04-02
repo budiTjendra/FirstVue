@@ -3,7 +3,7 @@ Vue.component('productDetail', {
       details: {
           type: Array,
           required: true
-      }
+      },
   },
   template:`
     <ul>
@@ -21,7 +21,7 @@ Vue.component('product',{
       premium:{
           type: Boolean,
           required: true
-      }
+      },
     },
     template: `
         <div class="product">
@@ -42,10 +42,7 @@ Vue.component('product',{
                       :style="{backgroundColor: variant.variantColor}"
                 >
                 </div>
-        
-                <div class="cart">
-                    <p>Cart({{cart}})</p>       
-                </div>      
+   
                 
                 <button v-on:click="addToCart" :disabled="!inStock" :class="{ disabledButton: !inStock}">Add to Cart</button>
                 <button @click="removeOne">-</button>                          
@@ -84,20 +81,20 @@ Vue.component('product',{
                     variantQuantity: 12
                 }
             ],
-            cart: 0,
         }
     },
     methods: {
-        addToCart: function () {
-            this.cart += 1
+        removeOne() {
+            if (this.cart > 0)
+                this.cart -= 1
         },
         updateProduct: function (index) {
             this.selectedVariant = index;
         },
-        removeOne() {
-            if (this.cart > 0)
-                this.cart -= 1
-        }
+        addToCart: function () {
+            console.log('addToCard');
+            this.$emit('add-to-cart')
+        },
     },
     computed: {
         title: function () {
@@ -136,6 +133,12 @@ Vue.component('product',{
 var app = new Vue({
     el: '#app',
     data: {
-        premium: true
+        premium: true,
+        cart: 0,
+    },
+    methods:{
+        updateCart(){
+            this.cart += 1
+        }
     }
 })
