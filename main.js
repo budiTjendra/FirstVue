@@ -1,6 +1,7 @@
 var app = new Vue({
     el: '#app',
     data:{
+        brand: 'BATA',
         product: 'Socks',
         message: 'helloworld',
         image: 'images/socks-white.jpg',
@@ -33,6 +34,11 @@ var app = new Vue({
         removeOne() {
             if (this.cart > 0)
                 this.cart -= 1
+        }
+    },
+    computed: {
+        title: function () {
+            return this.brand + ' ' + this.product
         }
     }
 })
