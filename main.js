@@ -4,9 +4,9 @@ var app = new Vue({
         brand: 'BATA',
         product: 'Socks',
         message: 'helloworld',
-        image: 'images/socks-white.jpg',
         url: 'http://www.google.com',
         inStock:false,
+        selectedVariant:0,
         inventory: 0,
         onSale: true,
         details: ["70% cotton","30% spandex"],
@@ -28,8 +28,8 @@ var app = new Vue({
         addToCart: function () {
             this.cart += 1
         },
-        updateProduct: function(variantImage) {
-            this.image = variantImage
+        updateProduct: function(index) {
+            this.selectedVariant =  index
         },
         removeOne() {
             if (this.cart > 0)
@@ -48,5 +48,8 @@ var app = new Vue({
             else
                 return 'out of stock'
         },
+        image: function (){
+            return this.variants[this.selectedVariant].variantImage
+        }
     }
 })
