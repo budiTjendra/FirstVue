@@ -103,6 +103,17 @@ Vue.component('product',{
                     <button @click="removeOne">-</button>     
                                  
                 </div>
+                <div>
+                    <h2>Reviews</h2>
+                    <p v-if="!reviews.length">There are no reviews yet.</p>
+                    <ul>
+                      <li v-for="review in reviews">
+                      <p>{{ review.name }}</p>
+                      <p>Rating: {{ review.rating }}</p>
+                      <p>{{ review.review }}</p>
+                      </li>
+                    </ul>
+               </div>                
                 <product-review @add-review="addReview"></product-review>
                 <div>
                     <a :href="url" target="_blank">Google</a>
@@ -150,7 +161,7 @@ Vue.component('product',{
         },
         addReview: function(productReview){
             console.log('addReview', productReview)
-            this.reviews.push({productReview})
+            this.reviews.push(productReview)
         }
     },
     computed: {
