@@ -1,23 +1,6 @@
-Skip to content
-
-Search…
-All gists
-Back to GitHub
-Sign in
-Sign up
-Instantly share code, notes, and snippets.
-
-@atomjar atomjar/product_style
-Last active 2 days ago
-4626
-Code Revisions 3 Stars 46 Forks 26
-<script src="https://gist.github.com/atomjar/67db5aa9b7b9013dcf0d91c91f54e1a9.js"></script>
-
-Stylesheet for Vue Mastery's Intro to Vue course
-product_style
 body {
     font-family: tahoma;
-    color:#282828;
+    color: #282828;
     margin: 0px;
 }
 
@@ -29,8 +12,6 @@ body {
 
 .product {
     display: flex;
-    flex-flow: wrap;
-    padding: 1rem;
 }
 
 img {
@@ -41,23 +22,18 @@ img {
 }
 
 .product-image {
-    width: 80%;
+    flex-basis: 700px;
 }
 
-.product-image,
 .product-info {
     margin-top: 10px;
-    width: 50%;
+    flex-basis: 500px;
 }
 
 .color-box {
     width: 40px;
     height: 40px;
     margin-top: 5px;
-}
-
-.out-of-stock{
-    text-decoration: line-through
 }
 
 .cart {
@@ -82,9 +58,8 @@ button {
 }
 
 .review-form {
-    width: 400px;
+    width: 30%;
     padding: 20px;
-    margin: 40px;
     border: 1px solid #d8d8d8;
 }
 
@@ -98,218 +73,3 @@ textarea {
     width: 100%;
     height: 60px;
 }
-
-.tab {
-    margin-left: 20px;
-    cursor: pointer;
-}
-
-.activeTab {
-    color: #16C0B0;
-    text-decoration: underline;
-}
-@mohammadrezabehruz
-mohammadrezabehruz commented on 15 Feb 2019
-Thank you. It was so fantastic and usefull
-
-@cakcak27
-cakcak27 commented on 23 Feb 2019
-thanks. this is very usefull.
-
-@djibba22
-djibba22 commented on 23 Feb 2019
-Thanks! This is incredibly handy.
-
-@GreggX
-GreggX commented on 25 Feb 2019
-Thank you so much! Awesome course.
-
-@Vidyakathare
-Vidyakathare commented on 10 Mar 2019
-Thank you.
-
-@gichimux
-gichimux commented on 12 Mar 2019
-thanks!
-
-@lucianomariani
-lucianomariani commented on 18 Mar 2019
-Thanks!
-
-@Castrosteven
-Castrosteven commented on 20 Mar 2019
-nice
-
-@DPBermudez
-DPBermudez commented on 20 Mar 2019
-Thanks a lot. It's very usefull
-
-@ghost
-ghost commented on 24 Mar 2019
-fantastic!
-
-@cvasquez1425
-cvasquez1425 commented on 4 Apr 2019
-Many Thanks.
-
-@reneevanh
-reneevanh commented on 5 Apr 2019
-Fantastic! Thank you
-
-@sbuteryd
-sbuteryd commented on 6 Apr 2019
-Thanks.
-
-@colebearski
-colebearski commented on 11 Apr 2019
-Alright, alright, alright.
-
-@Krondon25
-Krondon25 commented on 23 Apr 2019
-Gracias.
-
-@izoo
-izoo commented on 27 Apr 2019
-Thanks for this great help much appreciated
-
-@katherinehg
-katherinehg commented on 13 May 2019
-Thanks a lot !
-
-@lonnyrichard27
-lonnyrichard27 commented on 6 Jun 2019
-This is amazing thanks!
-
-@Van-peterson
-Van-peterson commented on 10 Jul 2019
-Thanks a lot, we've so much appreciate it
-
-@m2paulc
-m2paulc commented on 19 Jul 2019
-Thank you for this great course!
-
-@victorfds
-victorfds commented on 22 Jul 2019
-Thank you.
-
-@Theodory
-Theodory commented on 6 Aug 2019
-Nice
-
-@deividisss
-deividisss commented on 7 Aug 2019
-var Thanks
-
-@selimparmaksiz
-selimparmaksiz commented on 18 Aug 2019
-Thanks, very nice styling
-
-@AyushShaw
-AyushShaw commented on 24 Aug 2019
-Thank you!!
-
-@anton1408
-anton1408 commented on 29 Aug 2019
-ty!)
-
-@yoshisansan
-yoshisansan commented on 6 Sep 2019
-thx!
-
-@joseguamanp
-joseguamanp commented on 14 Sep 2019
-gracias
-
-@SyedAnasIkhlas
-SyedAnasIkhlas commented on 27 Sep 2019
-Thank you so much!
-
-@FrancoisPdev
-FrancoisPdev commented on 1 Oct 2019
-Thank you !
-
-@robinlxz
-robinlxz commented on 2 Oct 2019
-Thanks!
-
-@Alifanna
-Alifanna commented on 11 Oct 2019
-Great course!
-
-@romeumellobr
-romeumellobr commented on 17 Oct 2019
-Thank you!
-
-@zhaoboxiang
-zhaoboxiang commented on 17 Oct 2019
-Thank you! it's very useful 👍
-
-@rohitraj2020
-rohitraj2020 commented on 27 Oct 2019
-Wow
-
-@httpfive
-httpfive commented on 27 Oct 2019
-Thank you!
-
-@DerekSeymour71
-DerekSeymour71 commented on 7 Nov 2019
-been through the first 3 episodes, thanks. Really good.
-
-@suprth
-suprth commented on 19 Nov 2019
-Thank you!
-
-@masonjamali
-masonjamali commented on 28 Nov 2019
-Great stuff, cheers.
-
-@VeronikaVasilchikova
-VeronikaVasilchikova commented on 13 Jan
-Thank you!
-
-@Jytang10
-Jytang10 commented on 14 Jan
-Thank you!
-
-@adhamqodirov
-adhamqodirov commented on 2 Feb
-awesome
-
-@Nydan
-Nydan commented on 7 Feb
-Thank you!
-
-@ramanjaneya-karnati
-ramanjaneya-karnati commented on 26 Feb
-Thanks
-
-@hanhabesha
-hanhabesha commented 25 days ago
-አመሰግናለሁ
-
-@SindbadSeafarer
-SindbadSeafarer commented 18 days ago
-good
-
-@josmel
-josmel commented 3 days ago
-thank you
-
-@sdudnic
-sdudnic commented 2 days ago
-@atomjar, can you close the comments? it seems you have a boot "thank you" invasion!
-
-to join this conversation on GitHub. Already have an account? Sign in to comment
-© 2020 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About

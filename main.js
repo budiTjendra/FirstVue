@@ -1,6 +1,6 @@
 Vue.component('product',{
     template: `
-        <div>
+        <div class="product">
            <span v-show="onSale"><h1 style="color:red">ON SALE!</h1></span>
             <div class="product-image">
                 <img :src="image"/>
@@ -8,27 +8,32 @@ Vue.component('product',{
             <div class="product-info" >
                 <h1>{{ title }}</h1>
                 <p>{{ inventoryStatus}}</p>
+                
+                <ul>
+                    <li v-for="detail in details">{{detail}}</li>
+                </ul>
+                
+                <div  v-for="(variant, index) in variants"
+                      :key="variant.variantId"
+                      class="color-box"
+                      @mouseover="updateProduct(index)"
+                      :style="{backgroundColor: variant.variantColor}"
+                >
+                </div>
+        
+                <div class="cart">
+                    <p>Cart({{cart}})</p>       
+                </div>      
+                
+                <button v-on:click="addToCart" :disabled="!inStock" :class="{ disabledButton: !inStock}">Add to Cart</button>
+                <button @click="removeOne">-</button>                          
             </div>
     
-            <ul>
-                <li v-for="detail in details">{{detail}}</li>
-            </ul>
+
     
-            <div  v-for="(variant, index) in variants"
-                  :key="variant.variantId"
-                  class="color-box"
-                  @mouseover="updateProduct(index)"
-                  :style="{backgroundColor: variant.variantColor}"
-            >
-            </div>
+
     
-            <div class="cart">
-                <p>Cart({{cart}})</p>
-    
-            </div>
-    
-            <button v-on:click="addToCart" :disabled="!inStock" :class="{ disabledButton: !inStock}">Add to Cart</button>
-            <button @click="removeOne">-</button>
+
             <div>
                 <a :href="url" target="_blank">Google</a>
             </div>
