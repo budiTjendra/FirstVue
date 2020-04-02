@@ -5,9 +5,8 @@ var app = new Vue({
         product: 'Socks',
         message: 'helloworld',
         url: 'http://www.google.com',
-        inStock:false,
         selectedVariant:0,
-        onSale: true,
+        onSale: false,
         details: ["70% cotton","30% spandex"],
         variants:[
             {
@@ -39,7 +38,11 @@ var app = new Vue({
     },
     computed: {
         title: function () {
-            return this.brand + ' ' + this.product
+            const brandProduct =  this.brand + ' ' + this.product
+            if (this.onSale)
+                return brandProduct + ' is on sale'
+
+            return brandProduct
         },
         inventoryStatus: function() {
             if (this.inventory > 10)
@@ -54,6 +57,9 @@ var app = new Vue({
         },
         inventory: function(){
             return this.variants[this.selectedVariant].variantQuantity
+        },
+        inStock: function(){
+            return this.variants[this.selectedVariant].variantQuantity > 0
         }
     }
 })
