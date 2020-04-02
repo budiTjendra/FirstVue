@@ -1,3 +1,21 @@
+Vue.component('product-tabs', {
+    template: `
+        <div>
+            <span class="tabs" 
+                :class="{ activeTab: selectedTab === tab }"
+                v-for="(tab, index) in tabs"
+                @click="selectedTab = tab"
+                :key="tab"
+          >{{ tab }}</span>
+        </div>
+      `,
+    data() {
+        return {
+            tabs: ['Reviews', 'Make a Review'],
+            selectedTab: 'Reviews'
+        }
+    }
+});
 
 Vue.component('product-review', {
    template:`
@@ -99,7 +117,7 @@ Vue.component('product',{
                 <div class="product-info" >
                     <h1>{{ title }}</h1>
                     <p>{{ inventoryStatus}}</p>
-                    <p>{{shipping}}</p>
+                    <p>{{shipping}}</p>                    
                     <productDetail :details="details"></productDetail>
     
                     
@@ -116,6 +134,7 @@ Vue.component('product',{
                     <button @click="removeOne">-</button>     
                                  
                 </div>
+                <product-tabs :reviews="reviews"></product-tabs>
                 <div>
                     <h2>Reviews</h2>
                     <p v-if="!reviews.length">There are no reviews yet.</p>
