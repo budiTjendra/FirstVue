@@ -39,6 +39,14 @@ var app = new Vue({
     computed: {
         title: function () {
             return this.brand + ' ' + this.product
-        }
+        },
+        inventoryStatus: function() {
+            if (this.inventory > 10)
+                return 'In Stock'
+            else if (this.inventory <= 10 && this.inventory > 0)
+                return 'Running out of stock'
+            else
+                return 'out of stock'
+        },
     }
 })
